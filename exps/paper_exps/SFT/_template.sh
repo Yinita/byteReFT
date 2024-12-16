@@ -18,7 +18,7 @@ batch_size="3"
 eval_batch_size="3"
 gradient_accumulation_steps="2"
 max_input_length="1024"
-num_workers="8"
+num_workers="4"
 learning_rate="1e-5"
 weight_decay="0"
 warmup_step="-100"
@@ -39,8 +39,8 @@ wandb_project="ReFT"
 wandb_run_name="${exp_name}"
 #########
 
-num_processes='8'
-main_process_port='8888'
+num_processes='4'
+main_process_port='9999'
 
 mkdir -p "${model_dir}"
 accelerate launch \

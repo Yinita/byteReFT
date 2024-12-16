@@ -1,0 +1,240 @@
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+W1215 23:48:19.888000 187588 torch/distributed/run.py:793] 
+W1215 23:48:19.888000 187588 torch/distributed/run.py:793] *****************************************
+W1215 23:48:19.888000 187588 torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1215 23:48:19.888000 187588 torch/distributed/run.py:793] *****************************************
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+[W1215 23:48:24.966975310 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1215 23:48:25.037675065 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank3]:     resolved_file = hf_hub_download(
+[rank3]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+[rank3]:     validate_repo_id(arg_value)
+[rank3]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+[rank3]:     raise HFValidationError(
+[rank3]: huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'hf_models/CodeLlama-7b-hf/'. Use `repo_type` argument if needed.
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 544, in <module>
+[rank3]:     main(args)
+[rank3]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 391, in main
+[rank3]:     tokenizer = AutoTokenizer.from_pretrained(args['tokenizer_name_or_path'], use_fast=True)
+[rank3]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 844, in from_pretrained
+[rank3]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank3]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 676, in get_tokenizer_config
+[rank3]:     resolved_config_file = cached_file(
+[rank3]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_file
+[rank3]:     raise EnvironmentError(
+[rank3]: OSError: Incorrect path_or_model_id: 'hf_models/CodeLlama-7b-hf/'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank7]:     resolved_file = hf_hub_download(
+[rank7]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+[rank7]:     validate_repo_id(arg_value)
+[rank7]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+[rank7]:     raise HFValidationError(
+[rank7]: huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'hf_models/CodeLlama-7b-hf/'. Use `repo_type` argument if needed.
+
+[rank7]: The above exception was the direct cause of the following exception:
+
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 544, in <module>
+[rank7]:     main(args)
+[rank7]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 391, in main
+[rank7]:     tokenizer = AutoTokenizer.from_pretrained(args['tokenizer_name_or_path'], use_fast=True)
+[rank7]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 844, in from_pretrained
+[rank7]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank7]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 676, in get_tokenizer_config
+[rank7]:     resolved_config_file = cached_file(
+[rank7]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_file
+[rank7]:     raise EnvironmentError(
+[rank7]: OSError: Incorrect path_or_model_id: 'hf_models/CodeLlama-7b-hf/'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[W1215 23:48:25.424993637 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1215 23:48:25.614814232 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1215 23:48:25.638655808 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1215 23:48:25.650880716 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1215 23:48:25.652133789 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank1]:     resolved_file = hf_hub_download(
+[rank1]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+[rank1]:     validate_repo_id(arg_value)
+[rank1]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+[rank1]:     raise HFValidationError(
+[rank1]: huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'hf_models/CodeLlama-7b-hf/'. Use `repo_type` argument if needed.
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 544, in <module>
+[rank1]:     main(args)
+[rank1]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 391, in main
+[rank1]:     tokenizer = AutoTokenizer.from_pretrained(args['tokenizer_name_or_path'], use_fast=True)
+[rank1]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 844, in from_pretrained
+[rank1]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank1]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 676, in get_tokenizer_config
+[rank1]:     resolved_config_file = cached_file(
+[rank1]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_file
+[rank1]:     raise EnvironmentError(
+[rank1]: OSError: Incorrect path_or_model_id: 'hf_models/CodeLlama-7b-hf/'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[W1215 23:48:25.750852908 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank4]:     resolved_file = hf_hub_download(
+[rank4]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+[rank4]:     validate_repo_id(arg_value)
+[rank4]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+[rank4]:     raise HFValidationError(
+[rank4]: huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'hf_models/CodeLlama-7b-hf/'. Use `repo_type` argument if needed.
+
+[rank4]: The above exception was the direct cause of the following exception:
+
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 544, in <module>
+[rank4]:     main(args)
+[rank4]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 391, in main
+[rank4]:     tokenizer = AutoTokenizer.from_pretrained(args['tokenizer_name_or_path'], use_fast=True)
+[rank4]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 844, in from_pretrained
+[rank4]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank4]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 676, in get_tokenizer_config
+[rank4]:     resolved_config_file = cached_file(
+[rank4]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_file
+[rank4]:     raise EnvironmentError(
+[rank4]: OSError: Incorrect path_or_model_id: 'hf_models/CodeLlama-7b-hf/'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank2]:     resolved_file = hf_hub_download(
+[rank2]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+[rank2]:     validate_repo_id(arg_value)
+[rank2]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+[rank2]:     raise HFValidationError(
+[rank2]: huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'hf_models/CodeLlama-7b-hf/'. Use `repo_type` argument if needed.
+
+[rank2]: The above exception was the direct cause of the following exception:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 544, in <module>
+[rank2]:     main(args)
+[rank2]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 391, in main
+[rank2]:     tokenizer = AutoTokenizer.from_pretrained(args['tokenizer_name_or_path'], use_fast=True)
+[rank2]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 844, in from_pretrained
+[rank2]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank2]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 676, in get_tokenizer_config
+[rank2]:     resolved_config_file = cached_file(
+[rank2]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_file
+[rank2]:     raise EnvironmentError(
+[rank2]: OSError: Incorrect path_or_model_id: 'hf_models/CodeLlama-7b-hf/'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank6]:     resolved_file = hf_hub_download(
+[rank6]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+[rank6]:     validate_repo_id(arg_value)
+[rank6]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+[rank6]:     raise HFValidationError(
+[rank6]: huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'hf_models/CodeLlama-7b-hf/'. Use `repo_type` argument if needed.
+
+[rank6]: The above exception was the direct cause of the following exception:
+
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 544, in <module>
+[rank6]:     main(args)
+[rank6]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 391, in main
+[rank6]:     tokenizer = AutoTokenizer.from_pretrained(args['tokenizer_name_or_path'], use_fast=True)
+[rank6]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 844, in from_pretrained
+[rank6]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank6]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 676, in get_tokenizer_config
+[rank6]:     resolved_config_file = cached_file(
+[rank6]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_file
+[rank6]:     raise EnvironmentError(
+[rank6]: OSError: Incorrect path_or_model_id: 'hf_models/CodeLlama-7b-hf/'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank5]:     resolved_file = hf_hub_download(
+[rank5]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+[rank5]:     validate_repo_id(arg_value)
+[rank5]:   File "/home/aiscuser/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+[rank5]:     raise HFValidationError(
+[rank5]: huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'hf_models/CodeLlama-7b-hf/'. Use `repo_type` argument if needed.
+
+[rank5]: The above exception was the direct cause of the following exception:
+
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 544, in <module>
+[rank5]:     main(args)
+[rank5]:   File "/home/aiscuser/byteReFT/train_sft_model.py", line 391, in main
+[rank5]:     tokenizer = AutoTokenizer.from_pretrained(args['tokenizer_name_or_path'], use_fast=True)
+[rank5]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 844, in from_pretrained
+[rank5]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank5]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 676, in get_tokenizer_config
+[rank5]:     resolved_config_file = cached_file(
+[rank5]:   File "/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/utils/hub.py", line 469, in cached_file
+[rank5]:     raise EnvironmentError(
+[rank5]: OSError: Incorrect path_or_model_id: 'hf_models/CodeLlama-7b-hf/'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+wandb: Currently logged in as: yinita. Use `wandb login --relogin` to force relogin
+[rank4]:[W1215 23:48:26.402415562 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1215 23:48:26.430000 187588 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 187708 closing signal SIGTERM
+W1215 23:48:26.431000 187588 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 187709 closing signal SIGTERM
+W1215 23:48:26.431000 187588 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 187710 closing signal SIGTERM
+W1215 23:48:26.432000 187588 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 187712 closing signal SIGTERM
+W1215 23:48:26.433000 187588 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 187713 closing signal SIGTERM
+W1215 23:48:26.433000 187588 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 187714 closing signal SIGTERM
+W1215 23:48:26.434000 187588 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 187715 closing signal SIGTERM
+E1215 23:48:26.813000 187588 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 187711) of binary: /opt/conda/envs/ptca/bin/python
+Traceback (most recent call last):
+  File "/opt/conda/envs/ptca/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/envs/ptca/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/opt/conda/envs/ptca/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1153, in launch_command
+    deepspeed_launcher(args)
+  File "/opt/conda/envs/ptca/lib/python3.10/site-packages/accelerate/commands/launch.py", line 846, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/aiscuser/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/aiscuser/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/aiscuser/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_sft_model.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-12-15_23:48:26
+  host      : node-0
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 187711)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

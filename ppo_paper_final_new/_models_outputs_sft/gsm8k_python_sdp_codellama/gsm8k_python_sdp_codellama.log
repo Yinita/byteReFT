@@ -1,0 +1,48 @@
+[2024-12-15 23:47:54,031] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,203] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,516] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,562] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,683] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,686] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,729] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,735] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:47:59,748] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:00,870] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:01,272] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:01,279] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:01,476] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:01,580] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:01,581] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-12-15 23:48:01,591] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:01,669] [INFO] [comm.py:652:init_distributed] cdb=None
+{'model_name_or_path': 'hf_models/CodeLlama-7b-hf', 'tokenizer_name_or_path': 'hf_models/CodeLlama-7b-hf/', 'model_dir': 'ppo_paper_final_new/_models_outputs_sft/gsm8k_python_sdp_codellama/', 'train_file': 'data/gsm8k_python_sdp.json', 'test_file': 'data/gsm8k_test_set.json', 'batch_size': 3, 'eval_batch_size': 3, 'n_epochs': 40, 'num_workers': 8, 'learning_rate': 1e-05, 'weight_decay': 0.0, 'warmup_step': None, 'clip_grad_norm': 1.0, 'evaluating_epoch_freq': 1, 'logging_epoch_freq': 1, 'saving_epoch_freq': 1, 'evaluating_step_freq': None, 'logging_step_freq': 10, 'saving_step_freq': None, 'seed': 42, 'max_input_length': 1024, 'gradient_accumulation_steps': 2, 'keep_num_ckpt': 40, 'wandb_log': True, 'wandb_project': 'ReFT', 'wandb_run_name': 'gsm8k_python_sdp_codellama', 'engine': 'python'}
+{
+  "model_name_or_path": "hf_models/CodeLlama-7b-hf",
+  "tokenizer_name_or_path": "hf_models/CodeLlama-7b-hf/",
+  "model_dir": "ppo_paper_final_new/_models_outputs_sft/gsm8k_python_sdp_codellama/",
+  "train_file": "data/gsm8k_python_sdp.json",
+  "test_file": "data/gsm8k_test_set.json",
+  "batch_size": 3,
+  "eval_batch_size": 3,
+  "n_epochs": 40,
+  "num_workers": 8,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.0,
+  "warmup_step": null,
+  "clip_grad_norm": 1.0,
+  "evaluating_epoch_freq": 1,
+  "logging_epoch_freq": 1,
+  "saving_epoch_freq": 1,
+  "evaluating_step_freq": null,
+  "logging_step_freq": 10,
+  "saving_step_freq": null,
+  "seed": 42,
+  "max_input_length": 1024,
+  "gradient_accumulation_steps": 2,
+  "keep_num_ckpt": 40,
+  "wandb_log": true,
+  "wandb_project": "ReFT",
+  "wandb_run_name": "gsm8k_python_sdp_codellama",
+  "engine": "python"
+}
+[2024-12-15 23:48:01,799] [INFO] [comm.py:652:init_distributed] cdb=None

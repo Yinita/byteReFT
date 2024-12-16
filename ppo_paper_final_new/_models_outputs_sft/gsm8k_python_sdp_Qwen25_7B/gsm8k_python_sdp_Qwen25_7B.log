@@ -1,0 +1,69 @@
+[2024-12-16 00:30:06,282] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 00:30:11,413] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 00:30:11,484] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 00:30:11,487] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 00:30:11,554] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 00:30:13,023] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-16 00:30:13,140] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-16 00:30:13,144] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-16 00:30:13,227] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-16 00:30:13,227] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+{'model_name_or_path': 'Qwen/Qwen2.5-7B-Instruct', 'tokenizer_name_or_path': 'Qwen/Qwen2.5-7B-Instruct', 'model_dir': 'ppo_paper_final_new/_models_outputs_sft/gsm8k_python_sdp_Qwen25_7B/', 'train_file': 'data/gsm8k_python_sdp.json', 'test_file': 'data/gsm8k_test_set.json', 'batch_size': 3, 'eval_batch_size': 3, 'n_epochs': 40, 'num_workers': 4, 'learning_rate': 1e-05, 'weight_decay': 0.0, 'warmup_step': None, 'clip_grad_norm': 1.0, 'evaluating_epoch_freq': 1, 'logging_epoch_freq': 1, 'saving_epoch_freq': 1, 'evaluating_step_freq': None, 'logging_step_freq': 10, 'saving_step_freq': None, 'seed': 42, 'max_input_length': 1024, 'gradient_accumulation_steps': 2, 'keep_num_ckpt': 40, 'wandb_log': True, 'wandb_project': 'ReFT', 'wandb_run_name': 'gsm8k_python_sdp_Qwen25_7B', 'engine': 'python'}
+{
+  "model_name_or_path": "Qwen/Qwen2.5-7B-Instruct",
+  "tokenizer_name_or_path": "Qwen/Qwen2.5-7B-Instruct",
+  "model_dir": "ppo_paper_final_new/_models_outputs_sft/gsm8k_python_sdp_Qwen25_7B/",
+  "train_file": "data/gsm8k_python_sdp.json",
+  "test_file": "data/gsm8k_test_set.json",
+  "batch_size": 3,
+  "eval_batch_size": 3,
+  "n_epochs": 40,
+  "num_workers": 4,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.0,
+  "warmup_step": null,
+  "clip_grad_norm": 1.0,
+  "evaluating_epoch_freq": 1,
+  "logging_epoch_freq": 1,
+  "saving_epoch_freq": 1,
+  "evaluating_step_freq": null,
+  "logging_step_freq": 10,
+  "saving_step_freq": null,
+  "seed": 42,
+  "max_input_length": 1024,
+  "gradient_accumulation_steps": 2,
+  "keep_num_ckpt": 40,
+  "wandb_log": true,
+  "wandb_project": "ReFT",
+  "wandb_run_name": "gsm8k_python_sdp_Qwen25_7B",
+  "engine": "python"
+}
+Raw data: DatasetDict({
+    train: Dataset({
+        features: ['item_id', 'question', 'answer_cot', 'answer_value'],
+        num_rows: 7356
+    })
+    test: Dataset({
+        features: ['item_id', 'question', 'answer_value'],
+        num_rows: 1319
+    })
+})
+Using instruction: Question:
+
+Using cot_trigger: 
+Answer reasoning:
+
+Using answer_trigger: 
+Therefore, the answer is: 
+Processed data: DatasetDict({
+    train: Dataset({
+        features: ['item_id', 'question', 'answer_cot', 'answer_value', 'input_ids', 'labels', 'attention_mask', 'prefix', 'prefix_attention_mask', 'input_ids_max_length'],
+        num_rows: 7356
+    })
+    test: Dataset({
+        features: ['item_id', 'question', 'answer_value', 'input_ids', 'labels', 'attention_mask', 'prefix', 'prefix_attention_mask', 'answer_cot', 'input_ids_max_length'],
+        num_rows: 1319
+    })
+})
+train train_input_ids_max_length 628
+test test_input_ids_max_length 195

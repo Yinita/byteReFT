@@ -1,0 +1,50 @@
+[2024-12-15 23:48:05,754] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:10,976] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:11,082] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:11,214] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:11,276] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:11,276] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:11,336] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:11,344] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:11,344] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-15 23:48:12,547] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:12,547] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+{'model_name_or_path': 'hf_models/galactica-6.7b/', 'tokenizer_name_or_path': 'hf_models/galactica-6.7b/', 'model_dir': 'ppo_paper_final_new/_models_outputs_sft/gsm8k_python_sdp_galactica/', 'train_file': 'data/gsm8k_python_sdp.json', 'test_file': 'data/gsm8k_test_set.json', 'batch_size': 3, 'eval_batch_size': 3, 'n_epochs': 40, 'num_workers': 8, 'learning_rate': 1e-05, 'weight_decay': 0.0, 'warmup_step': None, 'clip_grad_norm': 1.0, 'evaluating_epoch_freq': 1, 'logging_epoch_freq': 1, 'saving_epoch_freq': 1, 'evaluating_step_freq': None, 'logging_step_freq': 10, 'saving_step_freq': None, 'seed': 42, 'max_input_length': 1024, 'gradient_accumulation_steps': 2, 'keep_num_ckpt': 40, 'wandb_log': True, 'wandb_project': 'ReFT', 'wandb_run_name': 'gsm8k_python_sdp_galactica', 'engine': 'python'}
+{
+  "model_name_or_path": "hf_models/galactica-6.7b/",
+  "tokenizer_name_or_path": "hf_models/galactica-6.7b/",
+  "model_dir": "ppo_paper_final_new/_models_outputs_sft/gsm8k_python_sdp_galactica/",
+  "train_file": "data/gsm8k_python_sdp.json",
+  "test_file": "data/gsm8k_test_set.json",
+  "batch_size": 3,
+  "eval_batch_size": 3,
+  "n_epochs": 40,
+  "num_workers": 8,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.0,
+  "warmup_step": null,
+  "clip_grad_norm": 1.0,
+  "evaluating_epoch_freq": 1,
+  "logging_epoch_freq": 1,
+  "saving_epoch_freq": 1,
+  "evaluating_step_freq": null,
+  "logging_step_freq": 10,
+  "saving_step_freq": null,
+  "seed": 42,
+  "max_input_length": 1024,
+  "gradient_accumulation_steps": 2,
+  "keep_num_ckpt": 40,
+  "wandb_log": true,
+  "wandb_project": "ReFT",
+  "wandb_run_name": "gsm8k_python_sdp_galactica",
+  "engine": "python"
+}
+[2024-12-15 23:48:12,731] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:12,942] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:13,151] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:13,172] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:13,249] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:13,284] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-15 23:48:13,440] [INFO] [comm.py:652:init_distributed] cdb=None
+[1;34mwandb[0m: 🚀 View run [33mgsm8k_python_sdp_galactica[0m at: [34mhttps://wandb.ai/yinita/ReFT/runs/fj13i3np[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20241215_234812-fj13i3np/logs[0m
