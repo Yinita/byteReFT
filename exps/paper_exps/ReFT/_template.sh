@@ -16,9 +16,9 @@ kl_coef=${kl_coef:-''} # For NL should put 0.05, For Python put 0.01
 model_dir="ppo_paper_final_new/_models_outputs_rl/${exp_name}/"
 config_file="./default_config_deepspeed.yaml"
 
-batch_size="4"
-mini_batch_size="4"
-eval_batch_size="8"
+batch_size="1"
+mini_batch_size="1"
+eval_batch_size="2"
 ppo_epochs="2"
 num_workers="0"
 learning_rate="3e-7"
@@ -48,8 +48,8 @@ wandb_project="ReFT"
 wandb_run_name="${exp_name}"
 #########
 
-num_processes='8'
-main_process_port='8888'
+num_processes='4'
+main_process_port='9999'
 
 mkdir -p "${model_dir}"
 accelerate launch \

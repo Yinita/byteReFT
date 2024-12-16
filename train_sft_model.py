@@ -227,69 +227,71 @@ def train_one_epoch(args, model, train_dataset, train_dataloader, optimizer, sch
     epoch_result_dict = defaultdict(list)
     with tqdm(enumerate(train_dataloader), total=len(train_dataloader), disable=not accelerator.is_main_process, desc='Train Loop') as t:
         for idx, batch in t:
-            with accelerator.accumulate(model):
-                output = model(**batch['forward_kwargs'])
-                # Get some metrics
-                loss = output[0]
-                result_dict, extra = {}, None
-                # Update
-                accelerator.backward(loss)
-                if accelerator.sync_gradients:
-                    if clip_grad_norm is not None:
-                        accelerator.clip_grad_norm_(model.parameters(), clip_grad_norm)
+            # DeepSpeed 梯度累积通过配置实现，不再使用 accelerator.accumulate
+            output = model(**batch['forward_kwargs'])
+            loss = output[0]
+
+            # 反向传播
+            accelerator.backward(loss)
+
+            # 梯度同步和裁剪
+            if (idx + 1) % args['gradient_accumulation_steps'] == 0:
+                if clip_grad_norm is not None:
+                    accelerator.clip_grad_norm_(model.parameters(), clip_grad_norm)
+
+                # 优化器更新和梯度清零
                 optimizer.step()
                 optimizer.zero_grad()
-                # model.zero_grad()
-                if accelerator.sync_gradients:
-                    scheduler.step()
-                
-            if accelerator.sync_gradients:
-                global_step += 1
-                # Step update metric
-                epoch_result_dict['loss'].append(loss.item()) 
-                for k, v in result_dict.items():
-                    epoch_result_dict[k].append(v)
 
-                # Step evaluating
+                # 学习率调度器更新
+                scheduler.step()
+
+                global_step += 1
+                epoch_result_dict['loss'].append(loss.item())
+
+                # 评估逻辑
                 eval_log_dict = {}
                 is_best = False
                 if evaluating_step_freq is not None and global_step % evaluating_step_freq == 0:
-                    evaluate_result_dict = {f'Eval.Gen.{k}':  v for k, v in evaluate_generation(args, model, test_dataset, test_dataloader, tokenizer).items()}
+                    evaluate_result_dict = {f'Eval.Gen.{k}': v for k, v in evaluate_generation(
+                        args, model, test_dataset, test_dataloader, tokenizer).items()}
                     eval_log_dict.update(evaluate_result_dict)
+
+                    # 更新最佳指标
                     if eval_log_dict['Eval.Gen.value_accuracy'] > best_eval_log_dict.get('Eval.Gen.value_accuracy_best', 0):
                         is_best = True
                         best_eval_log_dict['Eval.Gen.value_accuracy_best'] = eval_log_dict['Eval.Gen.value_accuracy']
+
                     if 'Eval.Gen.value_accuracy' not in summary_log_dict:
                         summary_log_dict['Eval.Gen.value_accuracy'] = []
                     summary_log_dict['Eval.Gen.value_accuracy'].append(eval_log_dict['Eval.Gen.value_accuracy'])
 
-                # Step logging
+                # 日志记录
                 train_log_dict = {}
                 if logging_step_freq is not None and global_step % logging_step_freq == 0:
-                    train_log_dict = {f'T.{k}': sum(v)/len(v) if isinstance(v, list) else v for k, v in epoch_result_dict.items()}
-                
+                    train_log_dict = {f'T.{k}': sum(v) / len(v) if isinstance(v, list) else v for k, v in epoch_result_dict.items()}
+
+                # 记录日志和打印
                 if eval_log_dict or train_log_dict:
                     log_dict = {'lr': scheduler.get_last_lr()[0], **train_log_dict, **eval_log_dict, **best_eval_log_dict}
                     if accelerator.is_main_process and args['wandb_log']:
                         wandb.log(log_dict, step=global_step)
-                        log_dict = {'wandb': args['wandb_project'] + '|' + args['wandb_run_name'], **log_dict}
-                    log_dict = {k: f'{v:.5g}' if isinstance(v, float) else v for k,v in log_dict.items()}
-                    accelerator.print(f"{prefix}[E={epoch}/{args['n_epochs']}, S={global_step}] {log_dict}")
+                    log_dict = {k: f'{v:.5g}' if isinstance(v, float) else v for k, v in log_dict.items()}
+                    accelerator.print(f"[E={epoch}/{args['n_epochs']}, S={global_step}] {log_dict}")
 
-                # Step saving
+                # 保存模型
                 if saving_step_freq is not None and global_step % saving_step_freq == 0:
                     if is_best:
-                        save_path = os.path.join(model_dir, f'best')
+                        save_path = os.path.join(model_dir, 'best')
                         do_checkpoint(args, model, tokenizer, save_path)
                     if args['keep_num_ckpt'] > 0:
-                        save_path = os.path.join(model_dir, f'global_step_{str(global_step)}')
+                        save_path = os.path.join(model_dir, f'global_step_{global_step}')
                         do_checkpoint(args, model, tokenizer, save_path, most_recent_ckpts_paths)
 
-                # Keep only max_record items
-                for k, v in epoch_result_dict.items():
-                    if len(v) > 1:
-                        epoch_result_dict[k] = v[-1:]
-
+            # 截断结果以控制内存
+            for k, v in epoch_result_dict.items():
+                if len(v) > 1:
+                    epoch_result_dict[k] = v[-1:]
 
     # Metric summary:
     epoch_result_dict = {k:(sum(v)/len(v) if isinstance(v, list) else v) for k, v in epoch_result_dict.items()}

@@ -1,0 +1,77 @@
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+W1216 01:45:32.444000 252500 torch/distributed/run.py:793] 
+W1216 01:45:32.444000 252500 torch/distributed/run.py:793] *****************************************
+W1216 01:45:32.444000 252500 torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1216 01:45:32.444000 252500 torch/distributed/run.py:793] *****************************************
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+WARNING:root:Cannot import JIT optimized kernels. CUDA extension will be disabled.
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+[W1216 01:45:37.352258171 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+[W1216 01:45:37.419743292 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+[W1216 01:45:37.479088526 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+/opt/conda/envs/ptca/lib/python3.10/site-packages/transformers/deepspeed.py:24: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+[W1216 01:45:37.629184247 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: yinita. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.1
+wandb: Run data is saved locally in /home/aiscuser/byteReFT/wandb/run-20241216_014538-udql7e77
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run gsm8k_python_sdp_Qwen_reft
+wandb: ⭐️ View project at https://wandb.ai/yinita/ReFT
+wandb: 🚀 View run at https://wandb.ai/yinita/ReFT/runs/udql7e77
+[rank2]:[W1216 01:45:38.472947437 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank1]:[W1216 01:45:38.489409558 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank3]:[W1216 01:45:38.490553562 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Map:   0%|          | 0/7356 [00:00<?, ? examples/s]Map:  14%|█▎        | 1000/7356 [00:00<00:05, 1204.52 examples/s]Map:  27%|██▋       | 2000/7356 [00:01<00:04, 1169.88 examples/s]Map:  41%|████      | 3000/7356 [00:02<00:03, 1201.97 examples/s]Map:  54%|█████▍    | 4000/7356 [00:03<00:02, 1202.52 examples/s]Map:  68%|██████▊   | 5000/7356 [00:04<00:01, 1178.72 examples/s]Map:  82%|████████▏ | 6000/7356 [00:05<00:01, 1196.59 examples/s]Map:  95%|█████████▌| 7000/7356 [00:05<00:00, 1196.88 examples/s]Map: 100%|██████████| 7356/7356 [00:06<00:00, 1183.14 examples/s]Map: 100%|██████████| 7356/7356 [00:06<00:00, 1188.70 examples/s]
+Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map:  76%|███████▌  | 1000/1319 [00:00<00:00, 1835.36 examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 1832.97 examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 1825.77 examples/s]
+[rank0]:[W1216 01:45:46.229357628 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Map:   0%|          | 0/7356 [00:00<?, ? examples/s]Map:   0%|          | 0/7356 [00:00<?, ? examples/s]Map:   0%|          | 0/7356 [00:00<?, ? examples/s]Map:  14%|█▎        | 1000/7356 [00:00<00:05, 1191.44 examples/s]Map:  14%|█▎        | 1000/7356 [00:00<00:05, 1175.55 examples/s]Map:  14%|█▎        | 1000/7356 [00:00<00:05, 1136.02 examples/s]Map:  27%|██▋       | 2000/7356 [00:01<00:04, 1225.64 examples/s]Map:  27%|██▋       | 2000/7356 [00:01<00:04, 1175.17 examples/s]Map:  27%|██▋       | 2000/7356 [00:01<00:04, 1135.75 examples/s]Map:  41%|████      | 3000/7356 [00:02<00:03, 1205.03 examples/s]Map:  41%|████      | 3000/7356 [00:02<00:03, 1175.10 examples/s]Map:  41%|████      | 3000/7356 [00:02<00:03, 1103.00 examples/s]Map:  54%|█████▍    | 4000/7356 [00:03<00:02, 1205.57 examples/s]Map:  54%|█████▍    | 4000/7356 [00:03<00:02, 1198.49 examples/s]Map:  54%|█████▍    | 4000/7356 [00:03<00:03, 1087.90 examples/s]Map:  68%|██████▊   | 5000/7356 [00:04<00:01, 1189.87 examples/s]Map:  68%|██████▊   | 5000/7356 [00:04<00:01, 1185.27 examples/s]Map:  68%|██████▊   | 5000/7356 [00:04<00:02, 1075.03 examples/s]Map:  82%|████████▏ | 6000/7356 [00:05<00:01, 1196.07 examples/s]Map:  82%|████████▏ | 6000/7356 [00:05<00:01, 1199.76 examples/s]Map:  82%|████████▏ | 6000/7356 [00:05<00:01, 1089.18 examples/s]Map:  95%|█████████▌| 7000/7356 [00:05<00:00, 1205.04 examples/s]Map:  95%|█████████▌| 7000/7356 [00:05<00:00, 1208.51 examples/s]Map: 100%|██████████| 7356/7356 [00:06<00:00, 1192.72 examples/s]Map: 100%|██████████| 7356/7356 [00:06<00:00, 1198.04 examples/s]
+Map: 100%|██████████| 7356/7356 [00:06<00:00, 1195.07 examples/s]Map: 100%|██████████| 7356/7356 [00:06<00:00, 1191.72 examples/s]
+Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map:  95%|█████████▌| 7000/7356 [00:06<00:00, 1082.83 examples/s]Map: 100%|██████████| 7356/7356 [00:06<00:00, 1088.43 examples/s]Map: 100%|██████████| 7356/7356 [00:06<00:00, 1091.95 examples/s]
+Map:  76%|███████▌  | 1000/1319 [00:00<00:00, 1776.62 examples/s]Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map:  76%|███████▌  | 1000/1319 [00:00<00:00, 1833.25 examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 1785.51 examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 1777.34 examples/s]
+Map: 100%|██████████| 1319/1319 [00:00<00:00, 1823.03 examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 1819.87 examples/s]
+Map:  76%|███████▌  | 1000/1319 [00:00<00:00, 1690.96 examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 1671.55 examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 1669.43 examples/s]
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+WARNING:root:A <class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'> model is loaded from 'Qwen/Qwen2.5-0.5B-Instruct', and no v_head weight is found. This IS expected if you are not resuming PPO training.
+  0% 0/1 [00:00<?, ?it/s]  0% 0/1 [00:00<?, ?it/s]  0% 0/1 [00:00<?, ?it/s]  0% 0/1 [00:00<?, ?it/s]
+Train Loop:   0% 0/1839 [00:00<?, ?it/s][AStarting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+/home/aiscuser/byteReFT/train_rl_reft.py:495: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_query_len = torch.mean(allgather(torch.std(query_len_per_sample)))
+/home/aiscuser/byteReFT/train_rl_reft.py:497: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_resp_len = torch.mean(allgather(torch.std(resp_len_per_sample)))
+/home/aiscuser/byteReFT/train_rl_reft.py:495: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_query_len = torch.mean(allgather(torch.std(query_len_per_sample)))
+/home/aiscuser/byteReFT/train_rl_reft.py:497: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_resp_len = torch.mean(allgather(torch.std(resp_len_per_sample)))
+/home/aiscuser/byteReFT/train_rl_reft.py:495: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_query_len = torch.mean(allgather(torch.std(query_len_per_sample)))
+/home/aiscuser/byteReFT/train_rl_reft.py:497: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_resp_len = torch.mean(allgather(torch.std(resp_len_per_sample)))
+/home/aiscuser/byteReFT/train_rl_reft.py:495: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_query_len = torch.mean(allgather(torch.std(query_len_per_sample)))
+/home/aiscuser/byteReFT/train_rl_reft.py:497: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  std_resp_len = torch.mean(allgather(torch.std(resp_len_per_sample)))
+
+Train Loop:   0% 1/1839 [00:12<6:25:11, 12.57s/it][A
+Train Loop:   0% 2/1839 [00:29<7:48:43, 15.31s/it][Awandb: WARNING Tried to log to step 2 that is less than the current step 3. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+
+Train Loop:   0% 3/1839 [00:47<8:19:47, 16.33s/it][Awandb: WARNING Tried to log to step 3 that is less than the current step 5. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+
+Train Loop:   0% 4/1839 [01:02<8:07:33, 15.94s/it][Awandb: WARNING Tried to log to step 4 that is less than the current step 7. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.

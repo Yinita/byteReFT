@@ -14,8 +14,8 @@ n_epochs=${n_epochs:-''}
 model_dir="ppo_paper_final_new/_models_outputs_sft/${exp_name}/"
 config_file="./default_config_deepspeed_ga2.yaml"
 
-batch_size="3"
-eval_batch_size="3"
+batch_size="1"
+eval_batch_size="1"
 gradient_accumulation_steps="2"
 max_input_length="1024"
 num_workers="4"
